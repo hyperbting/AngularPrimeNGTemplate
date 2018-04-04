@@ -1,15 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 
-////service
+//// service
 import { AuthService } from './private-theme/service/auth.service';
 import { LocalService } from './private-theme/service/local.service';
 
-////base pages
+//// base pages
 import { LogoutComponent } from './logout/logout.component';
 import { LoginComponent } from './login/login.component';
 
@@ -22,11 +21,13 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule
-  ],  
+  ],
   providers: [
     LocalService,
     AuthService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

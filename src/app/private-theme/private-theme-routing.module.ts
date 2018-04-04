@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { IndexComponent } from './index/index.component';
 import { PrivateThemeComponent } from './private-theme.component';
+import { IndexComponent } from './index/index.component';
 
 import { AuthGuard } from '../guard/auth.guard';
 
@@ -16,7 +16,6 @@ const adminRoutes: Routes = [
         path: '',
         canActivateChild: [AuthGuard],
         children: [
-          //{ path: 'crises', component: ManageCrisesComponent },
           { path: '', component: IndexComponent }
         ]
       }

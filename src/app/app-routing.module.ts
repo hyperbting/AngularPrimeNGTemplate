@@ -12,7 +12,6 @@ import { LogoutComponent } from './logout/logout.component';
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
   { path: 'logout', component: LogoutComponent},
   {
@@ -24,13 +23,16 @@ const routes: Routes = [
     loadChildren: 'app/private-theme/private-theme.module#PrivateThemeModule',
     canLoad: [AuthGuard]
   },
+  { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: '**', component: LogoutComponent }
 ];
 
 @NgModule({
-  imports: [ 
+  imports: [
     CommonModule,
-    RouterModule.forRoot(routes) 
+    PublicThemeModule,
+    PrivateThemeModule,
+    RouterModule.forRoot(routes, { enableTracing: true})
   ],
   exports: [ RouterModule ]
 })
