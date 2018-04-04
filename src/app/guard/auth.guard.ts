@@ -12,15 +12,15 @@ export class AuthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    //check if token stored
+    //// check if token stored
     if(!this.lService.hasToken("ACExpire"))
       return false;
 
-    //check if scpoe token stored
+    //// check if scpoe token stored
     if(!this.lService.hasToken("Scopes"))
     return false;
 
-    //TODO: other checks
+    //// TODO: other checks
 
     return true;
   }

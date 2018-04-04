@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PublicThemeRoutingModule } from './public-theme-routing.module';
 
 import { PublicThemeComponent } from './public-theme.component';
-import { IndexComponent } from './index/index.component';
+import { PublicIndexComponent } from './index/public-index.component';
 import { PlaygroundComponent } from './playground/playground.component';
 
 import { TimpickerComponent } from '../snippet/timpicker/timpicker.component';
@@ -16,7 +16,7 @@ import { TimpickerComponent } from '../snippet/timpicker/timpicker.component';
   ],
   declarations: [
     PublicThemeComponent,
-    IndexComponent,
+    PublicIndexComponent,
     PlaygroundComponent,
 
     TimpickerComponent
