@@ -7,18 +7,20 @@ import { PublicThemeComponent } from './public-theme.component';
 import { PublicIndexComponent } from './index/public-index.component';
 import { PlaygroundComponent } from './playground/playground.component';
 
+import { AmazingTimePickerModule } from 'amazing-time-picker';
 import { TimpickerComponent } from '../snippet/timpicker/timpicker.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    PublicThemeRoutingModule
+    PublicThemeRoutingModule,
+
+    AmazingTimePickerModule,
   ],
   declarations: [
     PublicThemeComponent,
     PublicIndexComponent,
     PlaygroundComponent,
-
     TimpickerComponent
   ]
 })

@@ -9,8 +9,6 @@ import { LogoutComponent } from './logout/logout.component';
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent},
-  { path: 'logout', component: LogoutComponent},
   {
     path: 'main',
     loadChildren: 'app/public-theme/public-theme.module#PublicThemeModule'
@@ -20,7 +18,9 @@ const routes: Routes = [
     loadChildren: 'app/private-theme/private-theme.module#PrivateThemeModule',
     canLoad: [AuthGuard]
   },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent},
+  { path: 'logout', component: LogoutComponent},
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: '**', component: LogoutComponent }
 ];
 

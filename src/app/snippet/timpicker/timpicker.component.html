@@ -1,3 +1,7 @@
-<p>
-  timpicker works!
-</p>
+
+
+<ul>
+  <li *ngFor="let dayTimeSpan of day1TimeSpanList; let idx = index">
+    <input atp-time-picker value="{{dayTimeSpan.open}}" /> T0 <input atp-time-picker value="{{dayTimeSpan.close}}" />
+  </li>
+</ul>
